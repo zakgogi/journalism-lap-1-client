@@ -4,7 +4,7 @@
   "description": "",
   "main": "article.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --collectCoverage"
   },
   "jest": {
     "testEnvironment": "jsdom"

@@ -19,20 +19,8 @@ textarea {
   white-space: nowrap;
 }
 
-#grid {
-  height: 305px;
-  width: 800px;
-  border: 1px solid black;
-}
-
-.row,
-.col {
-  border: 1px solid black;
-}
-
-.col {
-  height: 150px;
-  width: 100px;
+.row {
+  margin: 10px !important;
 }
 
 .selected {
