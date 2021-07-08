@@ -11,9 +11,36 @@ async function getAllData(word){
     extractArticles(dataJson, word);
 }
 
+function applyClasses(target){
+    target.classList.add('d-flex');
+    target.classList.add('justify-content-center');
+}
+
+function determineStyleClass(target, tag){
+    switch (tag){
+        case "Sport": 
+            target.classList.add('sportSection');
+            break;
+        case "Music":
+            target.classList.add('musicSection');
+            break;
+        case "Lifestyle":
+            target.classList.add('lifestyleSection');
+            break;
+        case "Film":
+            target.classList.add('filmSection');
+            break;
+        case "News": 
+            target.classList.add('newsSection');
+            break;
+        case "Other":
+            target.classList.add('otherSection');
+            break;
+    }
+};
 function extractArticles(data, word){
     let recentTargetParagraph = document.getElementById("recentSort");
-let popularTargetParagraph = document.getElementById("popularSort");
+    let popularTargetParagraph = document.getElementById("popularSort");
     let targetParagraph;
     if (word === "recent"){
         data.sort((a, b) => {
@@ -38,30 +65,39 @@ let popularTargetParagraph = document.getElementById("popularSort");
     }
 
     for (let i=0; i<data.length; i++){
+        let sectionToStyle = document.createElement('div');
+        determineStyleClass(sectionToStyle, data[i].tag);
         //Appending article title
         let titleHeader = document.createElement('h2');
         titleHeader.textContent = data[i].title;
-        targetParagraph.append(titleHeader);
+        applyClasses(titleHeader);
+        sectionToStyle.append(titleHeader);
         //Appending date and time
         let timeStamp = document.createElement('h4');
         let timeStampYear = data[i].date.slice(0,10);
         let timeStampTime = data[i].date.slice(11,16);
         timeStamp.textContent = `${timeStampYear}, ${timeStampTime}`
-        targetParagraph.append(timeStamp);
+        applyClasses(timeStamp);
+        sectionToStyle.append(timeStamp);
         //Append Article itself
         let para = document.createElement('p');
         para.textContent = data[i].article;
-        targetParagraph.append(para);
+        applyClasses(para);
+        sectionToStyle.append(para);
         //Append Gif
         if (data[i].gif){
             let newGIF = document.createElement('img');
             newGIF.src = data[i].gif;
             newGIF.style.display = "block";
             newGIF.style.marginBottom = "8px";
-            targetParagraph.append(newGIF);
+            newGIF.classList.add('mx-auto');
+
+            sectionToStyle.append(newGIF);
             
         }
         //Appending Emoji buttons and counters
+        let buttonSection = document.createElement('div');
+        applyClasses(buttonSection);
         let emojiReactions = [data[i].emoji1, data[i].emoji2, data[i].emoji3]
         for (let j=0; j<3; j++){
             let emojiButton = document.createElement('button');
@@ -99,26 +135,31 @@ let popularTargetParagraph = document.getElementById("popularSort");
                     emojiImage.style.height = "45px";
                     emojiImage.style.width = "45px";
                 });
-            targetParagraph.append(emojiButton);
-            targetParagraph.append(emojiCounter);
+                buttonSection.append(emojiButton);
+                buttonSection.append(emojiCounter);
         }
         //Appending comment button
         let commentButton = document.createElement('button');
-        commentButton.textContent = "show comments"
+        let commentImage = document.createElement('img');
+        commentImage.id = `commentImage${i+1}${word}`;
+        commentImage.setAttribute('src', './assets/images/EmptyChatBubble.png')
+        commentButton.append(commentImage);
         commentButton.id = `commentButton${i+1}${word}`
         commentButton.addEventListener('click', () => {
             showCommentSection(i+1, word);
         });
-        targetParagraph.append(commentButton);
+        buttonSection.append(commentButton);
+        sectionToStyle.append(buttonSection);
         //Adding line breaks
         let lineBreak = document.createElement('br');
         let anotherLineBreak = document.createElement('br');
-        targetParagraph.append(lineBreak);
-        targetParagraph.append(anotherLineBreak);
+        sectionToStyle.append(lineBreak);
+        sectionToStyle.append(anotherLineBreak);
         //Appending and displaying comment section if button clicked
         let commentSection = document.createElement('section');
         commentSection.id = `sectionToHide${i + 1}${word}`;
         commentSection.style.display = "none";
+        commentSection.classList.add('text-center');
         let newHeader = document.createElement('h3');
         newHeader.textContent = "Comments section"
         commentSection.append(newHeader);
@@ -132,11 +173,13 @@ let popularTargetParagraph = document.getElementById("popularSort");
         commentSection.append(yetAnotherLineBreak);
         let commentAppendButton = document.createElement('button');
         commentAppendButton.textContent = "Submit your comment";
+        commentAppendButton.classList.add("mb-2");
         commentAppendButton.addEventListener('click', ()=>{
             addAComment(newCommentArea.value, data[i].id);
             let comment = document.createElement('p');
             comment.textContent = newCommentArea.value;
             commentSection.append(comment);
+            newCommentArea.value = "";
         })
         commentSection.append(commentAppendButton);
         if (data[i].comments){
@@ -147,7 +190,8 @@ let popularTargetParagraph = document.getElementById("popularSort");
                 
             } 
         }
-        targetParagraph.append(commentSection);
+        sectionToStyle.append(commentSection);
+        targetParagraph.append(sectionToStyle);
     }
 };
 
@@ -192,19 +236,21 @@ async function createCommentPutRequest(jsonObject){
 function showCommentSection(id, word){
     let sectionToShow = document.getElementById(`sectionToHide${id}${word}`);
     let showButton = document.getElementById(`commentButton${id}${word}`);
+    let showButtonImage = document.getElementById(`commentImage${id}${word}`)
     let isItShowing = sectionToShow.style.display;
     switch (isItShowing){
         case "block":
-            showButton.textContent = "Show Comments";
+            showButtonImage.src = './assets/images/EmptyChatBubble.png';
             sectionToShow.style.display = "none";
             break;
         case "none":
-            showButton.textContent = "Hide Comments";
+            showButtonImage.src = './assets/images/FullChatBubble.png';
             sectionToShow.style.display = "block";
             break;
     }
 }
 
 module.exports = {
-    extractArticles
+    extractArticles,
+    showCommentSection
 }

@@ -112,13 +112,20 @@ function navigateToHome(){
 
 async function searchGif(e){
     e.preventDefault();
-    let searchQuery = document.getElementById('giphyFinder').value;
-    let giphyAPIURL = `https://api.giphy.com/v1/gifs/search?q=${searchQuery}&rating=g&api_key=${API_KEY}&limit=15`;
-    let fetchedData = await fetch(giphyAPIURL);
-    let dataJson = await fetchedData.json();
-    console.log(dataJson);
-    console.log(dataJson.data[0].images.fixed_height.url);
-    appendGifs(dataJson);
+    try {
+        let searchQuery = document.getElementById('giphyFinder').value;
+        let giphyAPIURL = `https://api.giphy.com/v1/gifs/search?q=${searchQuery}&rating=g&api_key=${API_KEY}&limit=15`;
+        let fetchedData = await fetch(giphyAPIURL);
+        let dataJson = await fetchedData.json();
+        console.log(dataJson);
+        console.log(dataJson.data[0].images.fixed_height.url);
+        appendGifs(dataJson);
+        // return dataJson.data[0].images.fixed_height.url;
+    } catch (error) {
+        console.log(error)
+        // return null;
+    }
+    
 }
 
 function appendGifs(json){
@@ -166,26 +173,61 @@ async function addCarouselItems(){
     buildArticles(dataJson);
 }
 
+function determineStyleClass(target, tag){
+    switch (tag){
+        case "Sport": 
+            target.classList.add('sportSection');
+            break;
+        case "Music":
+            target.classList.add('musicSection');
+            break;
+        case "Lifestyle":
+            target.classList.add('lifestyleSection');
+            break;
+        case "Film":
+            target.classList.add('filmSection');
+            break;
+        case "News": 
+            target.classList.add('newsSection');
+            break;
+        case "Other":
+            target.classList.add('otherSection');
+            break;
+    }
+};
+
+function applyClasses(target){
+    target.classList.add('d-flex');
+    target.classList.add('justify-content-center');
+}
+
 function buildArticles(data){
     for (let i=0; i<data.length; i++){
         let sectionToAppend = document.getElementById(`carousel${i+1}`);
+        determineStyleClass(sectionToAppend, data[i].tag);
         let title = document.createElement('h2')
         title.textContent = data[i].title;
+        applyClasses(title);
         sectionToAppend.append(title);
         let timeStamp = document.createElement('h4');
         let timeStampYear = data[i].date.slice(0,10);
         let timeStampTime = data[i].date.slice(11,16);
         timeStamp.textContent = `${timeStampYear}, ${timeStampTime}`
+        applyClasses(timeStamp);
         sectionToAppend.append(timeStamp);
         let para = document.createElement('p');
         para.textContent = data[i].article;
+        applyClasses(para);
         sectionToAppend.append(para);
         if (data[i].gif){
             let newGIF = document.createElement('img');
             newGIF.src = data[i].gif;
             newGIF.style.display = "block";
             newGIF.style.marginBottom = "8px";
+            newGIF.classList.add('mx-auto');
             sectionToAppend.append(newGIF); 
         }
     }
 }
+
+module.exports = { searchGif };

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create a post</title>
     <!-- for when we want to add a favicon -->
-    <link rel="icon" href="#" type="#" sizes="16x16">
+    <link rel="icon" href="./assets/images/FullChatBubble.png" type="png" sizes="16x16">
     <link rel="stylesheet" href="./assets/css/index-media-queries.css">
+    <link rel="stylesheet" href="./assets/css/imageSections.css">
     <link rel="stylesheet" href="./assets/css/createPost.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script defer src="./assets/JavaScript/createPost.js"></script>
@@ -44,14 +45,12 @@
                 </li>
             </ul>      
     </header>
-    <div class="row">
-    <div class="col container text-center">
+    <main>
+    <div class=" ontainer text-center">
         <br><br>
         <h3>Add your article here!</h3>
-        <br>
         <form>
-            <label for="postTitle">Title:</label>
-            <br>
+            <label id="labelToHide" for="postTitle">Title:</label>
             <br>
             <input id="postTitle" type ="text" placeholder="Title your post">
             <br>
@@ -89,8 +88,9 @@
         </form>
     </div>
     <br>
-    <div class="col">
-    <h4 class="text-center">Some inspiration..</h4>
+    <div id="carousel">
+    <h3 class="text-center">Some inspiration..</h3>
+    <br>
     <div class="container">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -104,8 +104,6 @@
         </div>
     </div>
     </div>
-    </div> 
-    <!-- close row -->
-    <br>
+    </main>
 </body>
 </html>
