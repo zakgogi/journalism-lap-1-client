@@ -230,4 +230,4 @@ function buildArticles(data){
     }
 }
 
-module.exports = { searchGif };
+module.exports = { appendGifs };

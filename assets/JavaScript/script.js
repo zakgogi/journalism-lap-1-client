@@ -3,8 +3,6 @@ window.onload = function() {
     getAllData("popular");
   };
 
-
-
 async function getAllData(word){
     let data = await fetch("https://journalism-project-lap-1.herokuapp.com/data");
     let dataJson = await data.json();

@@ -1,4 +1,5 @@
 const homeJavascript = require('../assets/JavaScript/script');
+// const postJavascript = require('../assets/JavaScript/createPost');
 let mockData = [{
     "title": "Test Title",
     "id": 3,
@@ -53,3 +54,18 @@ describe ('main loop creating article correctly', () => {
     })
 
 })
+
+// describe ('Testing functions on post page', () => {
+    
+//     beforeEach(()=> {
+//         document.documentElement.innerHTML = "<section id='gifSection'></section>"
+//         global.sectionToAppend = document.getElementById('gifSection');
+//     })
+
+//     test ('Does gif section get displayed', () => {
+//         postJavascript.appendGifs(mockData);
+//         expect(sectionToAppend.style.display).toBe("block");
+//     })
+
+
+// })

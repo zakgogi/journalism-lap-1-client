@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const homeHtml = fs.readFileSync(path.resolve(__dirname, '../home.html'), 'utf8');
 const createPost = fs.readFileSync(path.resolve(__dirname, '../createPost.html'), 'utf8');
-
+const tagPage = fs.readFileSync(path.resolve(__dirname, '../tagPage.html'), 'utf8');
 describe('home.html elements', () => {
     beforeAll(() => {
         document.documentElement.innerHTML = homeHtml.toString();
@@ -112,3 +112,48 @@ describe('createPost.html', () => {
 
 
 })
+
+describe('tagPageElements.html', () => {
+    beforeAll(() => {
+        document.documentElement.innerHTML = tagPage.toString();
+    })
+    test("There is a Favicon", () => {
+        let favicon = document.querySelector("link[rel = 'icon']");
+        expect(favicon).toBeTruthy();
+    })
+    test("The favicon has an image",() => {
+        let favicon = document.querySelector("link[rel = 'icon']")
+        let faviconImage = favicon.getAttribute("href");
+        expect(faviconImage).not.toBe("#")
+    })
+
+    test('it has a header', () => {
+        let header = document.querySelector('header');
+        expect(header).toBeTruthy();
+    })
+
+    test('it has a body', () => {
+        let body = document.querySelector('body');
+        expect(body).toBeTruthy();
+    })
+
+    test("Each navigation button has a link",() => {
+        let navItems = document.querySelectorAll("ul.navbar-nav li.nav-item:not(.active) a")
+        let navItemLinks = [];
+
+        [...navItems].forEach(function(item){
+            navItemLinks.push(item.getAttribute("href"));
+        })
+
+        expect(navItemLinks).toHaveLength(6);
+        expect(navItemLinks).toEqual(expect.arrayContaining([expect.stringContaining("tagPage.html?tag=")]));
+    })
+    
+    test("Has dropdown filter button with 2 options", () => {
+        let dropdown = document.getElementById('dropdown');
+        let buttons = document.querySelectorAll('div[class="dropdown-menu"] button');
+        expect(dropdown).toBeTruthy();
+        expect(buttons.length).toBe(2);
+    })
+
+});
