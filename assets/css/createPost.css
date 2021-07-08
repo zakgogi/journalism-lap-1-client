@@ -1,3 +1,11 @@
+input {
+  border-radius: 3px;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
 input[type="radio"] {
   display: inline;
 }
@@ -19,10 +27,37 @@ textarea {
   white-space: nowrap;
 }
 
-.row {
-  margin: 10px !important;
-}
-
 .selected {
   border: 2px solid rgb(102, 235, 102);
+}
+
+body {
+  background-color: #dae5fccb !important;
+}
+
+h1 {
+  background-color: #f7f7f7;
+  padding: 10px;
+  margin: 0px !important;
+  font-family: cursive;
+}
+
+h3,
+#counterDisplay,
+label {
+  font-family: cursive;
+}
+
+nav {
+  background-color: #f3f3fd;
+  margin: 0px;
+}
+
+#carousel {
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
+#labelToHide {
+  display: none;
 }

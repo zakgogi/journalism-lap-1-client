@@ -179,6 +179,7 @@ function extractArticles(data, word){
             let comment = document.createElement('p');
             comment.textContent = newCommentArea.value;
             commentSection.append(comment);
+            newCommentArea.value = "";
         })
         commentSection.append(commentAppendButton);
         if (data[i].comments){

@@ -3,7 +3,7 @@ textarea {
 }
 
 body {
-  background-color: #c8c8e9 !important;
+  background-color: #dae5fccb !important;
 }
 
 h1 {
@@ -24,66 +24,6 @@ h5 {
   border: solid 2px black;
 }
 
-.sportSection {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url(https://images.unsplash.com/photo-1459865264687-595d652de67e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.lifestyleSection {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url(https://images.unsplash.com/photo-1473181488821-2d23949a045a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.musicSection {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url(https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXVzaWN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.otherSection {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url(https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.filmSection {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url(https://images.unsplash.com/photo-1606579335925-ea67bcbd09c7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG1vdmllfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.newsSection {
-  background-image: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.6),
-      rgba(255, 255, 255, 0.6)
-    ),
-    url(https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 #dropdown {
   margin-right: 300px;
 }
