@@ -12,7 +12,7 @@ For this project we were tasked with creating a community journaling website. To
 * Users should have three emojis to choose from.
 * Users should be able to comment on other people’s entries.
 
-This readme will detail how to set-up and install the client side of this application, the technologies used as well as the wins and challenges we came across druring this project. If you would like to acess the client side website it can be found [here]().
+This readme will detail how to set-up and install the client side of this application, the technologies used as well as the wins and challenges we came across druring this project. If you would like to acess the client side website it can be found [here](https://sazjournalismproject.netlify.app/).
 
 ## Installation & Usage
 
