@@ -6,7 +6,7 @@ window.onload = function() {
 
 
 async function getAllData(word){
-    let data = await fetch("http://localhost:3000/data");
+    let data = await fetch("https://journalism-project-lap-1.herokuapp.com/data");
     let dataJson = await data.json();
     extractArticles(dataJson, word);
 }
@@ -163,7 +163,7 @@ function updateReactValue(id, buttonString, word){
 
 
 async function createPutRequest(jsonObject){
-    const reponse = await fetch("http://localhost:3000/data", {
+    const reponse = await fetch("https://journalism-project-lap-1.herokuapp.com/data", {
         method: "PUT", 
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(jsonObject)
@@ -180,7 +180,7 @@ function addAComment(comment, id){
 }
 
 async function createCommentPutRequest(jsonObject){
-    const reponse = await fetch("http://localhost:3000/", {
+    const reponse = await fetch("https://journalism-project-lap-1.herokuapp.com/", {
         method: "PUT", 
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(jsonObject)
