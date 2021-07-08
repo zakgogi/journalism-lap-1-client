@@ -1,6 +1,145 @@
-@media only screen and (max-width:414px){
-    main{
-        background-color: red;
+@media only screen and (max-width:850px){
+    header{
+        height: 5.5vh;
+        width: 100%;
+        background-color: mediumpurple;
+    }
+    body{
+        margin: 0;
     }
 
+    header * h1{
+        margin-bottom: 0;
+    }
+
+    header nav ul{
+        background-color: mediumpurple;
+    } 
+
+    ul.container{
+        margin-left: 0px;
+        margin-right:0px;
+        max-width: 100%;
+    }
+    .navbar-nav{
+        flex-direction: row;
+        width: 100% !important;
+        padding: 0rem .75rem;
+    }
+
+    .navbar{
+        padding-top: 0;        
+    }
+
+    .col-5{
+        height:65vh !important;
+    }
+
+    #recentSort{
+        margin-left: 0px ;
+        margin-right:0px;
+        max-width: 100%;
+    }
+
+    #content{
+        margin-top: 100px;
+    }
+    
+    #createPost{
+        margin-bottom:25px;
+    }
+}
+
+@media only screen and (min-width:851px)and (max-width:1790px){
+    header{
+        height: 5.5vh;
+        width: 100%;
+    }
+    
+    header.position-fixed{
+        position: static!important;
+    }
+
+    body{
+        margin: 0;
+    }
+
+    header * h1{
+        margin-bottom: 0;
+    }
+
+    ul.container{
+        margin-left: 0px;
+        margin-right:0px;
+        max-width: 100%;
+    }
+    .navbar-nav{
+        flex-direction: row;
+        width: 100% !important;
+        padding: 0rem .75rem;
+    }
+
+    .navbar{
+        padding-top: 0;        
+    }
+
+    .col-5{
+        height:80vh !important;
+    }
+
+    #recentSort, #popularSort{
+        min-width: 90%;
+        margin-left: 50px;
+        margin-right: 50px;       
+    }
+
+    #content{
+        margin-top: 100px;
+    }
+    
+    #createPost{
+        margin-bottom:25px;
+    }
+}
+
+/* @media only screen and (min-width:992px) and (max-width:1599px){
+
+    header.position-fixed{
+        background-color: red;
+        position: static!important;
+    }
+    .navbar-nav{
+        flex-direction: row;
+        width: 100% !important;
+        padding: 0rem .75rem;
+    }
+    .navbar{
+        padding-top: 0;        
+    }
+
+    #recentSort, #popularSort{
+        margin-left: 0px;
+        margin-right: 0px;
+         
+    }
+
+} */
+
+@media only screen and (min-width:1791px) and (max-width:2560px){
+
+    header.position-fixed{
+        position: static!important;
+    }
+    
+    .navbar-nav{
+        flex-direction: row;
+        width: 100% !important;
+        padding: 0rem .75rem;
+    }
+    
+    ul.container{
+        margin-left: 0px;
+        margin-right:0px;
+        max-width: 100%;
+    }
 }

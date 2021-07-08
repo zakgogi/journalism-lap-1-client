@@ -7,16 +7,18 @@
     <title>Home Page</title>
     <!-- for when we want to add a favicon -->
     <link rel="icon" href="#" type="#" sizes="16x16">
-    <link rel="stylesheet" href="./assets/css/index-media-queries.css">
     <link rel="stylesheet" href="./assets/css/home.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/home-media-queries.css">
     <script defer src="./assets/JavaScript/script.js"></script>
 </head>
 <body>
-    <header>
-        <h1 class="text-center">Home Page</h1>
+    <header class="position-fixed top-0">
+        <div>
+            <h1 class="text-center">Home Page</h1>
+        </div>
         <nav class="navbar justify-content-center navbar-expand-lg navbar-light">
-            <ul class = "navbar-nav">
+            <ul class = "container navbar-nav">
                 <li class="nav-item active">
                     <a class ="nav-link" href = "home.html">Home</a>
                 </li>
@@ -42,7 +44,7 @@
         </nav>
     </header>
     <!-- initial description paragraph -->
-    <div class="container">
+    <div id="content" class="container">
         <div id="initialParaDiv" class="text-center">
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis tempor turpis. Suspendisse eget tempus nisi, ullamcorper pretium tortor. Integer sagittis bibendum nisl lobortis consectetur. Etiam feugiat iaculis sapien vitae consectetur. Donec commodo magna sed nulla fringilla interdum. Morbi est dui, interdum sed lorem maximus, rutrum tincidunt lacus. Mauris mollis erat ac condimentum blandit. In gravida rhoncus odio scelerisque dapibus. Vestibulum eu sem sed ligula fermentum malesuada lobortis ut magna. Sed elementum ipsum nec justo eleifend, eu rutrum leo semper. Sed dapibus, orci at placerat bibendum, tellus neque facilisis eros, ut molestie enim quam vitae tortor. Nunc sed posuere nisi, vitae ultricies turpis. Aenean vulputate accumsan elit, ut pretium ipsum accumsan dictum. Vivamus et faucibus nibh. Proin ante ligula, sagittis quis ex sit amet, semper feugiat odio. 
@@ -67,7 +69,6 @@
                 </div>
             </div>
         </div>
-
         <br>
         <!-- button to navigate to create post page -->
         <div class="text-center">
