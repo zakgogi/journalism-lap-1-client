@@ -20,11 +20,9 @@ describe('testing output of gif request', () => {
         request(api).get('/').expect(200);
     })
 
-    test('after get request we are returned a gif', () => {
-        let x = request(api).get('/')
-        console.log(x);
-        console.log(x.url);
-    })
+    // test('after get request we are returned a gif', () => {
+    //     let x = request(api).get('/')
+    // })
     // test('finds gifs', async () => {
     //     const returnedGif = await gifRequest.searchGif();
     //     expect(fetch).toHaveBeenCalledTimes(1);
