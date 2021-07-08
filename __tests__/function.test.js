@@ -52,5 +52,4 @@ describe ('main loop creating article correctly', () => {
         expect(sectionToShow.style.display).toBe("block");
     })
 
-
 })

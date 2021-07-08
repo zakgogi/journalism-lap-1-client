@@ -104,7 +104,10 @@ let popularTargetParagraph = document.getElementById("popularSort");
         }
         //Appending comment button
         let commentButton = document.createElement('button');
-        commentButton.textContent = "show comments"
+        let commentImage = document.createElement('img');
+        commentImage.id = `commentImage${i+1}${word}`;
+        commentImage.setAttribute('src', './assets/images/EmptyChatBubble.png')
+        commentButton.append(commentImage);
         commentButton.id = `commentButton${i+1}${word}`
         commentButton.addEventListener('click', () => {
             showCommentSection(i+1, word);
@@ -192,14 +195,15 @@ async function createCommentPutRequest(jsonObject){
 function showCommentSection(id, word){
     let sectionToShow = document.getElementById(`sectionToHide${id}${word}`);
     let showButton = document.getElementById(`commentButton${id}${word}`);
+    let showButtonImage = document.getElementById(`commentImage${id}${word}`)
     let isItShowing = sectionToShow.style.display;
     switch (isItShowing){
         case "block":
-            showButton.textContent = "Show Comments";
+            showButtonImage.src = './assets/images/EmptyChatBubble.png';
             sectionToShow.style.display = "none";
             break;
         case "none":
-            showButton.textContent = "Hide Comments";
+            showButtonImage.src = './assets/images/FullChatBubble.png';
             sectionToShow.style.display = "block";
             break;
     }

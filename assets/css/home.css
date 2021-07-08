@@ -40,7 +40,13 @@ button[id="createPost"]a:link {
   text-decoration: none;
 }
 
-button[id^="id"] {
+button[id^="id"],
+button[id^="comment"] {
   background: none !important;
   border: none !important;
 }
+
+/* button img {
+  background: none !important;
+  border: none !important;
+} */
