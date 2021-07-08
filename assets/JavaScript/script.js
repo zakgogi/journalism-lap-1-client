@@ -206,5 +206,6 @@ function showCommentSection(id, word){
 }
 
 module.exports = {
-    extractArticles
+    extractArticles,
+    showCommentSection
 }

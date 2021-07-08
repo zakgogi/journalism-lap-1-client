@@ -37,4 +37,20 @@ describe ('main loop creating article correctly', () => {
         expect(titleToCheck).toBeTruthy();
         expect(titleToCheck.textContent).toBe("Test Title");
     })
+
+    test ('target section contains correct date', () => {
+        homeJavascript.extractArticles(mockData, mockWord);
+        let titleToCheck = document.querySelector('h4');
+        expect(titleToCheck).toBeTruthy();
+        expect(titleToCheck.textContent).toBe("2021-07-06, 13:55");
+    })
+
+    test ('show comment button reveals comment section', () => {
+        homeJavascript.extractArticles(mockData, mockWord);
+        homeJavascript.showCommentSection(1, mockWord);
+        let sectionToShow = document.getElementById(`sectionToHide1recent`);
+        expect(sectionToShow.style.display).toBe("block");
+    })
+
+
 })
