@@ -1,5 +1,6 @@
 window.onload = function() {
     getTagData("none");
+    setBackgroundClass();
 };
 let sectionToAppend = document.getElementById('tagData');
 const queryString = window.location.search;
@@ -20,6 +21,10 @@ const urlParams = new URLSearchParams(queryString);
 
 document.getElementById('pageName').textContent = urlParams.get('tag');
 
+function setBackgroundClass(){
+    let sectionToStyle = document.getElementById('borderMe');
+    sectionToStyle.classList.add(`${urlParams.get('tag').toLowerCase()}Section`);
+}
 function addToLocalStorage(){
     localStorage.setItem("tag", urlParams.get('tag'));
 }

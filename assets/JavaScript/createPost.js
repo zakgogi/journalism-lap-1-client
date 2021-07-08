@@ -112,13 +112,20 @@ function navigateToHome(){
 
 async function searchGif(e){
     e.preventDefault();
-    let searchQuery = document.getElementById('giphyFinder').value;
-    let giphyAPIURL = `https://api.giphy.com/v1/gifs/search?q=${searchQuery}&rating=g&api_key=${API_KEY}&limit=15`;
-    let fetchedData = await fetch(giphyAPIURL);
-    let dataJson = await fetchedData.json();
-    console.log(dataJson);
-    console.log(dataJson.data[0].images.fixed_height.url);
-    appendGifs(dataJson);
+    try {
+        let searchQuery = document.getElementById('giphyFinder').value;
+        let giphyAPIURL = `https://api.giphy.com/v1/gifs/search?q=${searchQuery}&rating=g&api_key=${API_KEY}&limit=15`;
+        let fetchedData = await fetch(giphyAPIURL);
+        let dataJson = await fetchedData.json();
+        console.log(dataJson);
+        console.log(dataJson.data[0].images.fixed_height.url);
+        // appendGifs(dataJson);
+        return dataJson.data[0].images.fixed_height.url;
+    } catch (error) {
+        console.log(error)
+        return null;
+    }
+    
 }
 
 function appendGifs(json){
@@ -189,3 +196,5 @@ function buildArticles(data){
         }
     }
 }
+
+module.exports = { searchGif };

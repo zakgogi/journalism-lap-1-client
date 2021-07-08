@@ -2,6 +2,20 @@ textarea {
   resize: none !important;
 }
 
+body {
+  background-color: #c8c8e9 !important;
+}
+
+h1 {
+  background-color: #f7f7f7;
+  padding: 10px;
+  margin: 0px !important;
+}
+nav {
+  background-color: #f3f3fd;
+  margin: 0px;
+}
+
 h5 {
   display: inline;
   padding: 10px;
@@ -10,15 +24,76 @@ h5 {
   border: solid 2px black;
 }
 
+.sportSection {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(https://images.unsplash.com/photo-1459865264687-595d652de67e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.lifestyleSection {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(https://images.unsplash.com/photo-1473181488821-2d23949a045a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.musicSection {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bXVzaWN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.otherSection {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.filmSection {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(https://images.unsplash.com/photo-1606579335925-ea67bcbd09c7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG1vdmllfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.newsSection {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url(https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 #dropdown {
   margin-right: 300px;
 }
-
 .col-5 {
-  border: solid 2px black;
+  border: solid 2px rgb(71, 3, 90);
   height: 800px !important;
   width: 800px !important;
   overflow: auto;
+  background-color: #f7f7f7;
+  padding: 0 !important;
 }
 #recentSort {
   margin-left: 100px;
@@ -26,27 +101,30 @@ h5 {
 #popularSort {
   margin-right: 100px;
 }
+
 button {
   border-radius: 5px !important;
   border: solid gray 2px;
 }
-
 button a {
   color: black;
   text-decoration: none;
 }
-
 button[id="createPost"]a:link {
   text-decoration: none;
 }
-
 button[id^="id"],
 button[id^="comment"] {
   background: none !important;
   border: none !important;
 }
-
-/* button img {
-  background: none !important;
-  border: none !important;
-} */
+section[id^="section"] p {
+  border: 1px solid black;
+  background-color: rgb(224, 223, 222);
+}
+.style1 {
+  background-color: rgb(222, 222, 252);
+}
+.style2 {
+  background-color: rgb(189, 189, 221);
+}
