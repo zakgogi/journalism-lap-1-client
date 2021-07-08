@@ -1,105 +1,105 @@
-@media only screen and (max-width:850px){
-    header{
-        height: 5.5vh;
-        width: 100%;
-        background-color: mediumpurple;
-    }
-    body{
-        margin: 0;
-    }
+@media only screen and (max-width: 850px) {
+  header {
+    height: 5.5vh;
+    width: 100%;
+  }
+  body {
+    margin: 0;
+  }
 
-    header * h1{
-        margin-bottom: 0;
-    }
+  header * h1 {
+    margin-bottom: 0;
+  }
 
-    header nav ul{
-        background-color: mediumpurple;
-    } 
+  header nav ul {
+    background-color: mediumpurple;
+  }
 
-    ul.container{
-        margin-left: 0px;
-        margin-right:0px;
-        max-width: 100%;
-    }
-    .navbar-nav{
-        flex-direction: row;
-        width: 100% !important;
-        padding: 0rem .75rem;
-    }
+  ul.container {
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    width: 100% !important;
+    padding: 0rem 0.75rem;
+  }
 
-    .navbar{
-        padding-top: 0;        
-    }
+  .navbar {
+    padding-top: 0;
+  }
 
-    .col-5{
-        height:65vh !important;
-    }
+  .col-5 {
+    height: 65vh !important;
+  }
 
-    #recentSort{
-        margin-left: 0px ;
-        margin-right:0px;
-        max-width: 100%;
-    }
+  #recentSort {
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+  }
 
-    #content{
-        margin-top: 100px;
-    }
-    
-    #createPost{
-        margin-bottom:25px;
-    }
+  #content {
+    margin-top: 100px;
+  }
+
+  #createPost {
+    margin-bottom: 25px;
+  }
 }
 
-@media only screen and (min-width:851px)and (max-width:1790px){
-    header{
-        height: 5.5vh;
-        width: 100%;
-    }
-    
-    header.position-fixed{
-        position: static!important;
-    }
+@media only screen and (min-width: 851px) and (max-width: 1790px) {
+  header {
+    height: 5.5vh;
+    width: 100%;
+  }
 
-    body{
-        margin: 0;
-    }
+  header.position-fixed {
+    position: static !important;
+  }
 
-    header * h1{
-        margin-bottom: 0;
-    }
+  body {
+    margin: 0;
+  }
 
-    ul.container{
-        margin-left: 0px;
-        margin-right:0px;
-        max-width: 100%;
-    }
-    .navbar-nav{
-        flex-direction: row;
-        width: 100% !important;
-        padding: 0rem .75rem;
-    }
+  header * h1 {
+    margin-bottom: 0;
+  }
 
-    .navbar{
-        padding-top: 0;        
-    }
+  ul.container {
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    width: 100% !important;
+    padding: 0rem 0.75rem;
+  }
 
-    .col-5{
-        height:80vh !important;
-    }
+  .navbar {
+    padding-top: 0;
+  }
 
-    #recentSort, #popularSort{
-        min-width: 90%;
-        margin-left: 50px;
-        margin-right: 50px;       
-    }
+  .col-5 {
+    height: 80vh !important;
+  }
 
-    #content{
-        margin-top: 100px;
-    }
-    
-    #createPost{
-        margin-bottom:25px;
-    }
+  #recentSort,
+  #popularSort {
+    min-width: 90%;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  #content {
+    margin-top: 100px;
+  }
+
+  #createPost {
+    margin-bottom: 25px;
+  }
 }
 
 /* @media only screen and (min-width:992px) and (max-width:1599px){
@@ -125,21 +125,20 @@
 
 } */
 
-@media only screen and (min-width:1791px) and (max-width:2560px){
+@media only screen and (min-width: 1791px) and (max-width: 2560px) {
+  header.position-fixed {
+    position: static !important;
+  }
 
-    header.position-fixed{
-        position: static!important;
-    }
-    
-    .navbar-nav{
-        flex-direction: row;
-        width: 100% !important;
-        padding: 0rem .75rem;
-    }
-    
-    ul.container{
-        margin-left: 0px;
-        margin-right:0px;
-        max-width: 100%;
-    }
+  .navbar-nav {
+    flex-direction: row;
+    width: 100% !important;
+    padding: 0rem 0.75rem;
+  }
+
+  ul.container {
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 100%;
+  }
 }
