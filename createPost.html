@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Create a post</title>
     <!-- for when we want to add a favicon -->
     <link rel="icon" href="#" type="#" sizes="16x16">
     <link rel="stylesheet" href="./assets/css/index-media-queries.css">
@@ -44,11 +44,11 @@
                 </li>
             </ul>      
     </header>
-    <main class="container text-center">
+    <div class="row">
+    <div class="col container text-center">
         <br><br>
-        <h3>Article Box</h3>
+        <h3>Add your article here!</h3>
         <br>
-
         <form>
             <label for="postTitle">Title:</label>
             <br>
@@ -87,8 +87,9 @@
             <br>
             <button id="formSubmit" disabled="true">Post Article</button>
         </form>
-    </main>
+    </div>
     <br>
+    <div class="col">
     <h4 class="text-center">Some inspiration..</h4>
     <div class="container">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -102,6 +103,9 @@
             </div>
         </div>
     </div>
+    </div>
+    </div> 
+    <!-- close row -->
     <br>
 </body>
 </html>

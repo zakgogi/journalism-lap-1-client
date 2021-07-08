@@ -1,3 +1,4 @@
+// let Article = require(`./articleClass`);
 class Article {
     constructor(length, article, tag, title, gif){
         this.title = title;
