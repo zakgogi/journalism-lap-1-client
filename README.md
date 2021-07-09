@@ -40,7 +40,7 @@ This readme will detail how to set-up and install the client side of this applic
   * Search for a gif (if you want to add one)
   * and submit your post!
   
-There's even a bit of inspiartion at the bottom, so don't be afraid to start posting!
+There's even a bit of inspiration at the bottom, so don't be afraid to start posting!
 ![image](https://user-images.githubusercontent.com/44873112/125068715-b4aaf980-e0ad-11eb-8723-585338c866c9.png)
 
 ## Technologies used
