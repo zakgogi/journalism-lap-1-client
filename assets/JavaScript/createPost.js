@@ -63,7 +63,7 @@ function getRadioButton(){
 
 async function getDataLength(e){
     e.preventDefault();
-    let data = await fetch("https://journalism-project-lap-1.herokuapp.com/data");
+    let data = await fetch("https://localhost:3000/data");
     let dataJson = await data.json();
     addNewArticle(dataJson.length);
     
@@ -98,7 +98,7 @@ function addNewArticle(length){
 }
 
 async function postJsonData(jsonObject) {
-    const response = await fetch("https://journalism-project-lap-1.herokuapp.com/data", {
+    const response = await fetch("https://localhost:3000/data", {
         method: "POST",
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(jsonObject)
@@ -168,7 +168,7 @@ function countFunc(){
 }
 
 async function addCarouselItems(){
-    let randomData = await fetch('https://journalism-project-lap-1.herokuapp.com/random')
+    let randomData = await fetch('https://localhost:3000/random')
     let dataJson = await randomData.json();
     buildArticles(dataJson);
 }

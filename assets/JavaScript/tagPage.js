@@ -30,7 +30,7 @@ function addToLocalStorage(){
 }
 
 async function getTagData(filter){
-    let data = await fetch(`https://journalism-project-lap-1.herokuapp.com/data/${urlParams.get('tag')}`);
+    let data = await fetch(`https://localhost:3000/data/${urlParams.get('tag')}`);
     let dataJson = await data.json();
     extractArticles(dataJson, filter);
 }
@@ -196,7 +196,7 @@ function updateReactValue(id, buttonString){
 
 
 async function createPutRequest(jsonObject){
-    const reponse = await fetch("https://journalism-project-lap-1.herokuapp.com/data", {
+    const reponse = await fetch("https://localhost:3000/data", {
         method: "PUT", 
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(jsonObject)
@@ -213,7 +213,7 @@ function addAComment(comment, id){
 }
 
 async function createCommentPutRequest(jsonObject){
-    const reponse = await fetch("https://journalism-project-lap-1.herokuapp.com/", {
+    const reponse = await fetch("https://localhost:3000/", {
         method: "PUT", 
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(jsonObject)

@@ -1,5 +1,5 @@
 const homeJavascript = require('../assets/JavaScript/script');
-// const postJavascript = require('../assets/JavaScript/createPost');
+// const { appendGifs } = require('../assets/JavaScript/createPost');
 let mockData = [{
     "title": "Test Title",
     "id": 3,
@@ -63,7 +63,7 @@ describe ('main loop creating article correctly', () => {
 //     })
 
 //     test ('Does gif section get displayed', () => {
-//         postJavascript.appendGifs(mockData);
+//         appendGifs(mockData);
 //         expect(sectionToAppend.style.display).toBe("block");
 //     })
 
