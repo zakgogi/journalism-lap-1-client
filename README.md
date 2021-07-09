@@ -18,22 +18,48 @@ This readme will detail how to set-up and install the client side of this applic
 
 ### Installation
 
-* 
+* Clone or download the repo.
+* Run `npm install` to install the dependencies.
+* Run `http-server` to open the client side and connect to the sever
 
 ### Usage
 
-* 
+* From the landing page you can scroll through the most recent and most popular posts
+  ![image](https://user-images.githubusercontent.com/44873112/125068392-55e58000-e0ad-11eb-9a4a-16be0df65d98.png)
+
+* You can also select categories from the navar to look at pages filtered by topic!
+* You can click the `create a post` button to be directed to the create a post page
+  
+  ![image](https://user-images.githubusercontent.com/44873112/125068488-71e92180-e0ad-11eb-9fbe-ebfb56eb858b.png)
+  ![image](https://user-images.githubusercontent.com/44873112/125068595-8e855980-e0ad-11eb-8ba8-cd1551108cf1.png)
+
+  here you can:
+  * Input a Title
+  * Add content for your post
+  * Select a Tag
+  * Search for a gif (if you want to add one)
+  * and submit your post!
+  
+There's even a bit of inspiartion at the bottom, so don't be afraid to start posting!
+![image](https://user-images.githubusercontent.com/44873112/125068715-b4aaf980-e0ad-11eb-8723-585338c866c9.png)
 
 ## Technologies used
 
-* 
+* VScode
+* Pyxel Edit
+* GitHub
+* Jest
+* Node
 
 ## Wins and Challenges
 
 ### Wins
-* 
+
+* Successfully deployed to netlify.
+* Have the required test coverage.
 
 ### Challenges
-* 
+
+* Throughout the project there were issues that came up that we couldn't solve immediately. These were assigned to eachother using the projectboard.
 
 # Enjoy! 😁
